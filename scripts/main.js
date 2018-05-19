@@ -35,8 +35,12 @@ var myHeading = document.querySelector('h2');
 我们使用 localStorage 的 setItem() 函数来创建并将数据存储在 'name'参数里，
 然后将其值设置为包含用户输入的姓名的 myName 变量。
 最后，我们将标题的 innerHTML 属性设置成加上用户姓名的字符串。*/
+myButton.onclick = function() {
+  setUserName();
+}
 function setUserName() {
   var myName = prompt('Please enter your name.');
+  if (!myName || myName.replace(/\s+/g,  "") === "") return;
   localStorage.setItem('name', myName);
   myHeading.innerHTML = "欢迎: " + myName;
 }
@@ -47,14 +51,15 @@ function setUserName() {
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
+
   var storedName = localStorage.getItem('name');
+  // alert(typeof storedName);
+  // if (!storedName || storedName.replace(/\s+/g,  "") === "") return;
   myHeading.innerHTML = "欢迎: " + storedName;
 }
 
 
-myButton.onclick = function() {
-  setUserName();
-}
+
 
 // 因为 name 是存放在 localStorage 里的，它会持续到网站关闭，所以这段个性化的信息在你重新打开浏览器时将仍然在这！
 // ?? 是存在浏览器还是存在服务器?

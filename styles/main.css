@@ -1,26 +1,28 @@
 
 html {
-  font-size: 20px; /* px 意为“像素（pixels）”: 这个基础字体的尺寸现在是10像素  */
-  font-family:仿宋,  serif;
+    font-size: 20px; /* px 意为“像素（pixels）”: 这个基础字体的尺寸现在是10像素  */
+    font-family:仿宋,  serif;
 
-  /*改变整个页面的颜色*/
-  background-color: #00539F;
-  height: 100%;
+    /*改变整个页面的颜色*/
+    background-color: #00539F;
+    height: 100%;
 }
 body {
     width: 600px;   /* — 强制页面永远保持600像素宽。*/
-    min-height: 99%;
-    margin: 0 auto; /* — 当你在 margin 或 padding 中设置两个值时，第一个值代表元素的上方和下方（在这个例子中设置为 0），而第二个值代表左边和右边（在这里，auto 是一个特殊的值，意思是水平方向上左右对称）。你也可以使用一个，三个或四个值，查看 这里 。*/
+    min-height: 97%;
+    margin: 0 auto; /* — 当你在 margin 或 padding 中设置两个值时，
+                    第一个值代表元素的上方和下方（在这个例子中设置为 0），而第二个值代表左边和右边（在这里，
+                    auto 是一个特殊的值，意思是水平方向上左右对称）。你也可以使用一个，三个或四个值，查看 这里 。*/
     background-color: #FF9500;  /* — 指定元素的背景颜色。我们给 body 元素用了一种略微偏红的橘色以与 html 元素形成对比。继续实验，尝试下 white 或者其他你喜欢的颜色。*/
-    padding: 0 20px 20px 20px;  /* — 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为20像素。值以上、右、下、左的顺序排列。*/
+    padding: 10px 20px 20px 20px;  /* — 我们给内边距设置了四个值来让内容四周产生一点空间。这一次我们不设置上方的内边距，设置右边，下方，左边的内边距为20像素。值以上、右、下、左的顺序排列。*/
     border: 5px solid black;    /* — 简单地为页面四周设置了5像素的黑色实线边框。*/
 }
 /*现在我们将要为 HTML 中 body 元素内的 (<h1>, <li>, 和 <p>)元素设置字体尺寸。
 我们也会将标题居中显示，同时为 body 元素内的内容设置行高和间距，来让页面可读性更高。*/
 /*你可以调整这些 px 值到任何你喜欢的值，来让你的设计更符合你的心意，不过通常你的设计应该看起来像这样：*/
 h1, h2 {
-  font-size: 50px;
-  text-align: center;
+    font-size: 50px;
+    text-align: center;
 }
 h2{font-size: 40px;}
 /* 为主标题定位和添加样式
@@ -40,10 +42,10 @@ h2{font-size: 40px;}
 第四个值设置了阴影的颜色*/
 
 h1, h2 {
-  margin: 0;
-  padding: 10px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+    margin: 0;
+    padding: 10px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
 }
 h2{ text-shadow:2px 2px 2px black; }
 
@@ -54,14 +56,24 @@ body 元素是块级元素，意味着它占据了页面的空间并且能够赋
 与之对应的是行内元素，则不能。
 所以为了使图像有外边距，我们必须使用 display: block 将其改成块级元素。*/
 img {
-
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
 }
 
 
+
+
+#change-user{
+    display:block;
+    margin: 60%  auto 10px;
+
+    background-color:#72DA0B;
+    text-align: center;
+    font-size: 1em;
+    font-family: serif;
+}
