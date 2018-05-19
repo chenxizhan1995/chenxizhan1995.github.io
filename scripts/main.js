@@ -7,16 +7,16 @@
 
 
 
-var myImage = document.querySelector('img');
+// var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/firefox-icon.jpg');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
-    }
-}
+// myImage.onclick = function() {
+//     var mySrc = myImage.getAttribute('src');
+//     if(mySrc === 'images/firefox-icon.png') {
+//       myImage.setAttribute ('src','images/firefox-icon.jpg');
+//     } else {
+//       myImage.setAttribute ('src','images/firefox-icon.png');
+//     }
+// }
 
 
 /*添加个性化的欢迎信息
@@ -38,7 +38,7 @@ var myHeading = document.querySelector('h2');
 function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  myHeading.innerHTML = "欢迎: " + myName;
 }
 /*这段代码首先用一个非运算符（逻辑非）来检查 name 数据是否存在。
 如果不存在， setUserName() 函数就会运行来创建它。
@@ -48,7 +48,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = storedName;
+  myHeading.innerHTML = "欢迎: " + storedName;
 }
 
 
